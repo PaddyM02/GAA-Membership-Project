@@ -7,11 +7,11 @@ The system aims to simplify club administration, improve data accuracy, and make
 
 ## Features
 
-- 🧾 Add, view, and update member information  
-- 💳 Manage membership payments and renewal dates  
-- 📅 Track player registrations and team assignments  
-- 🔍 Search and filter members by name, team, or status  
-- 📊 Generate reports and statistics for club administrators  
+-  Add, view, and update member information  
+- Manage membership payments and renewal dates  
+-  Track player registrations and team assignments  
+-  Search and filter members by name, team, or status  
+-  Generate reports and statistics for club administrators  
 
 ---
 
