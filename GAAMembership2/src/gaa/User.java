@@ -1,0 +1,43 @@
+package gaa;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class User {
+    private String name;
+    private String email;
+    private String passwordHash;
+    private String membership = "Silver";
+    private LocalDate expiryDate;
+    private int failedLoginAttempts = 0;
+    private boolean locked = false;
+    // Backwards-compatible: old project used strings for payments; keep both
+    private List<String> paymentStrings = new ArrayList<>();
+
+    public User() {}
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+    public String getPasswordHash() { return passwordHash; }
+    public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
+    public String getMembership() { return membership; }
+    public void setMembership(String membership) { this.membership = membership; }
+    public LocalDate getExpiryDate() { return expiryDate; }
+    public void setExpiryDate(LocalDate expiryDate) { this.expiryDate = expiryDate; }
+    public int getFailedLoginAttempts() { return failedLoginAttempts; }
+    public void setFailedLoginAttempts(int failedLoginAttempts) { this.failedLoginAttempts = failedLoginAttempts; }
+    public boolean isLocked() { return locked; }
+    public void setLocked(boolean locked) { this.locked = locked; }
+    public List<String> getPaymentStrings() { return paymentStrings; }
+
+    // convenience helper to map membership to enum-like class (MembershipPlan is not an enum now)
+    public MembershipPlan getMembershipPlanEnum() {
+        for (MembershipPlan mp : MembershipPlan.defaultPlans()) {
+            if (mp.getName().equalsIgnoreCase(this.membership)) return mp;
+        }
+        return null;
+    }
+}
