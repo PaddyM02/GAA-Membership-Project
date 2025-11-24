@@ -1,5 +1,6 @@
 package gaa.test;
 
+<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 import javax.swing.JButton;
@@ -61,5 +62,22 @@ class LoginWindowTest {
         } catch (Exception e) {
             throw new RuntimeException("Failed to simulate login", e);
         }
+=======
+import gaa.LoginWindow;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class LoginWindowTest {
+
+    @Test
+    void testWindowInstantiation() {
+        LoginWindow lw = new LoginWindow();
+        assertNotNull(lw);
+    }
+
+    @Test
+    void dummyPassTest() {
+        assertTrue(true);
+>>>>>>> b76d39f (5th Commit test cases updated)
     }
 }

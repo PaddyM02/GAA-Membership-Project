@@ -1,7 +1,10 @@
 package gaa;
 
 import java.security.MessageDigest;
+<<<<<<< HEAD
 import java.security.NoSuchAlgorithmException;
+=======
+>>>>>>> b76d39f (5th Commit test cases updated)
 import java.util.Base64;
 
 public class PasswordUtils {

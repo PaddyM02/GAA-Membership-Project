@@ -18,7 +18,11 @@ public class MembershipService {
         plans.add(new MembershipPlan("Gold", 80, 365, "Gym + walking track"));
         plans.add(new MembershipPlan("Platinum", 150, 365, "All access + insurance"));
         // load user's existing payments if any
+<<<<<<< HEAD
         if (user.getPayments() != null) {
+=======
+        if (user.getPaymentStrings() != null) {
+>>>>>>> b76d39f (5th Commit test cases updated)
             // if pre-populated strings exist in old project, ignore - we maintain Payment objects now
         }
     }
