@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class AuthService {
-    private final User user; // demo app is single-user focused for now
+    private final User user; 
     private final Map<String, String> resetTokens = new HashMap<>(); // token -> email
     private final Map<String, LocalDateTime> tokenExpiry = new HashMap<>();
 
